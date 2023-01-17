@@ -58,18 +58,12 @@
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
         <meta name="google-site-verification" content="PX0UBUvU2iDem91VyZmbGFRB6XYIZzo8oZIpOeVP94g">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./dist/bootstrap.min.css" media="screen">
-        <link
-            rel="preload"
-            as="style"
-            href="./assets/bootstrap/bootstrap.min.css"
-            onload="this.onload=null;this.rel='stylesheet'"
-        >
+        <!--  -->
         <link rel="stylesheet" href="./assets/style.css" media="screen">
-        <script defer src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha384-Ft/vb48LwsAEtgltj7o+6vtS2esTU9PCpDqcXs4OCVQFZu5BqprHtUCZ4kjK+bpE" crossorigin="anonymous"></script>
-        <script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
-        <script defer src="./assets/maugallery.js"></script>
-        <script defer src="./assets/scripts.js"></script>
+        <link rel="stylesheet" href="./assets/gallery.css" media="screen">
+        <script defer src="./assets/lazyload.js"></script>
+        <script defer src="./assets/carousel.js"></script>
+        <script defer src="./assets/gallery.js"></script>
     </head>
     <body>
         <nav class="top-header">
@@ -106,66 +100,56 @@
                 <div class="carousel-indicators">
                     <button
                         type="button"
-                        data-bs-target="#carouselExampleIndicators"
                         data-bs-slide-to="0"
                         class="active"
                         aria-current="true"
                         aria-label="Slide 1"
+                        data-bs-target="#carouselExampleIndicators"
                     ></button>
                     <button
                         type="button"
-                        data-bs-target="#carouselExampleIndicators"
                         data-bs-slide-to="1"
                         aria-label="Slide 2"
+                        data-bs-target="#carouselExampleIndicators"
                     ></button>
                     <button
                         type="button"
-                        data-bs-target="#carouselExampleIndicators"
                         data-bs-slide-to="2"
                         aria-label="Slide 3"
+                        data-bs-target="#carouselExampleIndicators"
                     ></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" data-id="0">
                         <img
                             itemprop="workExample"
                             src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash_1.webp"
                             class="d-block w-100 slide"
-                            alt="Slide 1"
+                            alt="Slide 0"
                         >
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-id="1">
                         <img
                             itemprop="workExample"
                             src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash_1.webp"
                             class="d-block w-100 slide"
-                            alt="Slide 2"
+                            alt="Slide 1"
                         >
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-id="2">
                         <img
                             itemprop="workExample"
                             src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
                             class="d-block w-100 slide"
-                            alt="Slide 3"
+                            alt="Slide 2"
                         >
                     </div>
                 </div>
-                <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev"
-                >
+                <button class="carousel-control-prev" type="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next"
-                >
+                <button class="carousel-control-next" type="button" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -187,76 +171,106 @@
         <section id="gallery">
             <h2 class="title" itemprop="about">Portfolio</h2>
             <div class="container py-3">
-                <div class="gallery" style="display: none">
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Concert"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/concerts/aaron-paul-wnx-fxzb6cw-unsplash.webp"
-                        alt="Aaron Paul Concert"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Entreprises"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/entreprise/ali-morshedlou-wmd64tmfc4k-unsplash.webp"
-                        alt="Ali Morshedlou Entreprise"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Entreprises"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/entreprise/jason-goodman-tho1-oukbg0-unsplash.webp"
-                        alt="Jason Goodman Entreprise"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Mariages"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/mariage/hannah-busing-rvf2r-qmprk-unsplash.webp"
-                        alt="Hannah Busing Mariage"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Portrait"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/portraits/ade-tunji-rvkhwwzfatq-unsplash.webp"
-                        alt="Ade Tunji Portrait"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Mariages"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/mariage/jakob-owens-siniljkxhmc-unsplash.webp"
-                        alt="Jakob Owens Mariage"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Portrait"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/portraits/van-prattenburg-443cl1ur-8-unsplash.webp"
-                        alt="Nino Van Prattenburg Portrait"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Concert"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/concerts/austin-neill-hgo1wfpxl3i-unsplash.webp"
-                        alt="Austin Neill Concert"
-                    >
-                    <img
-                        itemprop="workExample"
-                        data-gallery-tag="Entreprises"
-                        class="lazy gallery-item"
-                        data-src="./assets/images/gallery/entreprise/s-campos-felipe-fsgzm8n0hiy-unsplash.webp"
-                        alt="Mateus Campos Felipe Entreprise"
-                    >
+                <ul class="filters">
+                    <li class="filter active" data-images-toggle="all">Tous</li>
+                    <li class="filter " data-images-toggle="Concerts">Concerts</li>
+                    <li class="filter " data-images-toggle="Entreprises">Entreprises</li>
+                    <li class="filter " data-images-toggle="Mariages">Mariages</li>
+                    <li class="filter " data-images-toggle="Portraits">Portraits</li>
+                </ul>
+                <div class="gallery">
+                    <div class="gallery-item-container active" data-gallery-tag="Concerts">
+                        <img
+                            data-id="1"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/concerts/aaron-paul-wnx-fxzb6cw-unsplash.webp"
+                            alt="Aaron Paul Concert"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Entreprises">
+                        <img
+                            data-id="2"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/entreprise/ali-morshedlou-wmd64tmfc4k-unsplash.webp"
+                            alt="Ali Morshedlou Entreprise"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Entreprises">
+                        <img
+                            data-id="3"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/entreprise/jason-goodman-tho1-oukbg0-unsplash.webp"
+                            alt="Jason Goodman Entreprise"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Mariages">
+                        <img
+                            data-id="4"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/mariage/hannah-busing-rvf2r-qmprk-unsplash.webp"
+                            alt="Hannah Busing Mariage"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Portraits">
+                        <img
+                            data-id="5"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/portraits/ade-tunji-rvkhwwzfatq-unsplash.webp"
+                            alt="Ade Tunji Portrait"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Mariages">
+                        <img
+                            data-id="6"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/mariage/jakob-owens-siniljkxhmc-unsplash.webp"
+                            alt="Jakob Owens Mariage"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Portraits">
+                        <img
+                            data-id="7"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/portraits/van-prattenburg-443cl1ur-8-unsplash.webp"
+                            alt="Nino Van Prattenburg Portrait"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Concerts">
+                        <img
+                            data-id="8"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/concerts/austin-neill-hgo1wfpxl3i-unsplash.webp"
+                            alt="Austin Neill Concert"
+                        >
+                    </div>
+                    <div class="gallery-item-container active" data-gallery-tag="Entreprises">
+                        <img
+                            data-id="9"
+                            itemprop="workExample"
+                            class="lazy gallery-item"
+                            data-src="./assets/images/gallery/entreprise/s-campos-felipe-fsgzm8n0hiy-unsplash.webp"
+                            alt="Mateus Campos Felipe Entreprise"
+                        >
+                    </div>
                 </div>
             </div>
+            <dialog class="gallery-modal closed">
+                <button type="button" class="modal-control-prev" name="prev">&lt;</button>
+                <img class="modal-image" src="" alt="">
+                <button type="button" class="modal-control-next" name="next">&gt;</button>
+            </dialog>
             <div class="quote" itemscope itemtype="http://schema.org/Quotation">
                 <figure>
                     <blockquote>
-                        <h1 class="quote__text" itemprop="text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
+                        <h2 class="quote__text" itemprop="text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h2>
                     </blockquote>
                     <figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
                 </figure>
@@ -300,7 +314,7 @@
         <div class="quote" itemscope itemtype="http://schema.org/Quotation">
             <figure>
                 <blockquote>
-                    <h1 class="quote__text" itemprop="text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
+                    <h2 class="quote__text" itemprop="text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h2>
                 </blockquote>
                 <figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
             </figure>
