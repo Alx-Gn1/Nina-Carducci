@@ -42,7 +42,7 @@
         <meta property="og:title" content="Nina Carducci">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://alx-gn1.github.io/nina-carducci">
-        <meta property="og:image" content="https://alx-gn1.github.io/nina-carducci/assets/images/nina.webp">
+        <meta property="og:image" content="https://nina-carducci.github.io/assets/images/nina.png">
         <meta property="og:description" content="Découvrez les photos de Nina Carducci : concerts, entreprises, mariages, portraits... Propose des shooting, retouches photo, et la conception d'album photo">
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary">
@@ -50,7 +50,7 @@
         <meta name="twitter:title" content="Nina Carducci">
         <meta name="twitter:description" content="Découvrez les photos de Nina Carducci : concerts, entreprises, mariages, portraits... Propose des shooting, retouches photo, et la conception d'album photo">
         <meta name="twitter:creator" content="@ninacarducci.photo">
-        <meta name="twitter:image" content="https://alx-gn1.github.io/nina-carducci/assets/images/nina.webp">
+        <meta name="twitter:image" content="https://nina-carducci.github.io/assets/images/nina.png">
         <!--  -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Découvrez les photos de Nina Carducci : concerts, entreprises, mariages, portraits... Propose des shooting, retouches photo, et la conception d'album photo">
@@ -66,28 +66,28 @@
         <script defer src="./assets/gallery.min.js"></script>
     </head>
     <body>
-        <nav class="top-header">
+        <nav class="top-header" aria-label="Barre de navigation">
             <h1 class="name" itemprop="author">Nina Carducci</h1>
             <div class="nav">
                 <ul>
                     <li>
-                        <a href="#about">À propos</a>
+                        <a href="#about" aria-label="Lien vers la section 'a propos'">À propos</a>
                     </li>
                     <li>
-                        <a href="#gallery">Galerie</a>
+                        <a href="#gallery" aria-label="Lien vers la section 'galerie'">Galerie</a>
                     </li>
                     <li>
-                        <a href="#services">Service</a>
+                        <a href="#services" aria-label="Lien vers la section 'service'">Service</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" aria-label="Lien vers la section 'contact'">Contact</a>
                     </li>
                     <li>
                         <a
                             class="social-link"
                             href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
                             target="_blank"
-                            aria-label="Link to Nina Carducci's instagram"
+                            aria-label="Lien vers l'instagram de Nina Carducci"
                         >
                             <img src="assets/images/instagram.webp" alt="instagram logo">
                         </a>
@@ -95,7 +95,7 @@
                 </ul>
             </div>
         </nav>
-        <header id="header">
+        <header id="header" aria-label="Carousel d'image qui défilent automatiquement">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button
@@ -155,12 +155,18 @@
                 </button>
             </div>
         </header>
-        <section id="about">
+        <section id="about" aria-label="A propos de Nina Carducci">
             <div class="picture left">
                 <img src="./assets/images/nina.webp" alt="portrait de Nina Carducci">
             </div>
-            <div id="about-me" itemscope itemtype="http://schema.org/Quotation">
+            <div
+                id="about-me"
+                itemscope
+                itemtype="http://schema.org/Quotation"
+                aria-label="Présentation de Nina Carducci et de son travail"
+            >
                 <h2 class="about-me__title" itemprop="about">A propos de moi</h2>
+                <p itemprop="text" class="about-me__introduction">Photographies de mariage, d'évènements, de portraits... </p>
                 <p class="about-me__introduction" itemprop="text">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
                 <p itemprop="text">
                     Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
@@ -168,7 +174,7 @@
                 </p>
             </div>
         </section>
-        <section id="gallery">
+        <section id="gallery" aria-label="Galerie Portfolio de Nina Carducci">
             <h2 class="title" itemprop="about">Portfolio</h2>
             <div class="container py-3">
                 <ul class="filters">
@@ -181,6 +187,7 @@
                 <div class="gallery">
                     <div class="gallery-item-container active" data-gallery-tag="Concerts">
                         <img
+                            aria-controls="modal"
                             data-id="1"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -190,6 +197,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Entreprises">
                         <img
+                            aria-controls="modal"
                             data-id="2"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -199,6 +207,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Entreprises">
                         <img
+                            aria-controls="modal"
                             data-id="3"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -208,6 +217,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Mariages">
                         <img
+                            aria-controls="modal"
                             data-id="4"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -217,6 +227,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Portraits">
                         <img
+                            aria-controls="modal"
                             data-id="5"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -226,6 +237,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Mariages">
                         <img
+                            aria-controls="modal"
                             data-id="6"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -235,6 +247,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Portraits">
                         <img
+                            aria-controls="modal"
                             data-id="7"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -244,6 +257,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Concerts">
                         <img
+                            aria-controls="modal"
                             data-id="8"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -253,6 +267,7 @@
                     </div>
                     <div class="gallery-item-container active" data-gallery-tag="Entreprises">
                         <img
+                            aria-controls="modal"
                             data-id="9"
                             itemprop="workExample"
                             class="lazy gallery-item"
@@ -262,21 +277,31 @@
                     </div>
                 </div>
             </div>
-            <dialog class="gallery-modal closed">
-                <button type="button" class="modal-control-prev" name="prev">&lt;</button>
+            <dialog class="gallery-modal closed" aria-modal="true" aria-label="Fenêtre pour visualiser les images">
+                <button
+                    type="button"
+                    class="modal-control-prev"
+                    name="prev"
+                    aria-label="pevious button"
+                >&lt;</button>
                 <img class="modal-image" src="" alt="">
-                <button type="button" class="modal-control-next" name="next">&gt;</button>
+                <button
+                    type="button"
+                    class="modal-control-next"
+                    name="next"
+                    aria-label="next button"
+                >&gt;</button>
             </dialog>
             <div class="quote" itemscope itemtype="http://schema.org/Quotation">
                 <figure>
                     <blockquote>
-                        <h2 class="quote__text" itemprop="text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h2>
+                        <h2 class="quote__text" itemprop="text" aria-label="Citation de Richard Avedon">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h2>
                     </blockquote>
                     <figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
                 </figure>
             </div>
         </section>
-        <section id="services">
+        <section id="services" aria-label="Description des services proposés">
             <h2 class="title">Mes services</h2>
             <div class="container">
                 <div class="service">
@@ -314,12 +339,17 @@
         <div class="quote" itemscope itemtype="http://schema.org/Quotation">
             <figure>
                 <blockquote>
-                    <h2 class="quote__text" itemprop="text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h2>
+                    <h2 class="quote__text" itemprop="text" aria-label="Citation de Richard Avedon">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h2>
                 </blockquote>
                 <figcaption class="quote__author" itemprop="author">- Richard Avedon</figcaption>
             </figure>
         </div>
-        <section id="contact" itemscope itemtype="https://schema.org/ContactPage">
+        <section
+            id="contact"
+            itemscope
+            itemtype="https://schema.org/ContactPage"
+            aria-label="Formulaire de contact"
+        >
             <div class="container">
                 <div class="form-container">
                     <h2 itemprop="description">Une question ? Une demande de devis ?</h2>
